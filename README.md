@@ -1,4 +1,4 @@
-# **_I,Bảng mã lệnh điều khiển_**
+# **_I. Bảng mã lệnh điều khiển_**
 
 # 1. DEVICE
 ## Điều khiển 1 thiết bị
