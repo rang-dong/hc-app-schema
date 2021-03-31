@@ -1,6 +1,6 @@
-# **_Bảng mã lệnh điều khiển_**
+# **_I,Bảng mã lệnh điều khiển_**
 
-# DEVICE
+# 1. DEVICE
 ## Điều khiển 1 thiết bị
 Điều khiển một thiết bị có ID “b717f8d8-6f18-43c0-ae46-69c32998f653”, thiết lập giá trị cho thuộc tính có ID=0 thành 1
 #### Gửi đi
@@ -29,7 +29,7 @@ Giống bản tin gửi đi nhưng được gửi vào topic phản hồi
 ```
 
 
-# EVENTTRIGGER
+# 2. EVENTTRIGGER
 ## Thực hiện EventTrigger với ID tương ứng
 Thực hiện EventTrigger có ID=123
 #### Gửi đi
@@ -57,7 +57,7 @@ Thực hiện EventTrigger có ID=123
 ```
 
 
-# Group
+# 3. Group
 ## Điều khiển một nhóm thiết bị
 Điều khiển nhóm có ID=b717f8d8-6f18-43c0-ae46-69c32998f653, thiết lập giá trị thuộc tính ID=0 thành 1 cho tất cả các thiết bị trong nhóm
 #### Gửi đi
@@ -95,10 +95,10 @@ Thực hiện EventTrigger có ID=123
 }
 ```
 
-# **_Bảng mã lệnh phục vụ cài đặt/cấu hình_**
-# GROUP
+# **_II. Bảng mã lệnh phục vụ cài đặt/cấu hình_**
+# 1. GROUP
 
-## Tạo một nhóm "TYPE": "CREATE"
+## 1.1 Tạo một nhóm "TYPE": "CREATE"
 Tạo một nhóm mới gồm 3 thiết bị
 ### Gửi đi
 
@@ -144,7 +144,7 @@ Thành công
 }
 ```
 
-## Thêm thiết bị vào nhóm "TYPE": "ADD_DEVICE"
+## 1.2 Thêm thiết bị vào nhóm "TYPE": "ADD_DEVICE"
  Thêm 3 thiêt bị vào nhóm đã có sẵn
  
  ### Gửi đi
@@ -189,7 +189,7 @@ Thành công
 }
 ```
 
-## Xóa thiết bị trong nhóm "TYPE": "REMOVE_DEVICE" 
+## 1.3 Xóa thiết bị trong nhóm "TYPE": "REMOVE_DEVICE" 
 
 Xóa 3 thiết bị trong nhóm
 ### Gửi đi
@@ -232,7 +232,7 @@ Xóa 3 thiết bị trong nhóm
 }
 ``` 
 
-## Xóa cả nhóm "TYPE": "DELETE"
+## 1.4 Xóa cả nhóm "TYPE": "DELETE"
 Xóa nhóm đang tồn tại
 ### Gửi đi
 ```json
@@ -256,9 +256,9 @@ Xóa nhóm đang tồn tại
    }
 }
 ```
-# DEVICE
+# 2. DEVICE
 
-## SCAN
+## 2.1 SCAN
 Đưa thiết bị vào mạng
 ### Gửi đi
 
@@ -282,7 +282,7 @@ Bản tin phản hồi khi 1 thiết bị được thêm vào mạng
    }
 }
 ```
-## STOP
+## 2.2 STOP
 Dừng quá trình đưa thiết bị vào mạng
 ### Gửi đi
 
@@ -298,7 +298,7 @@ Dừng quá trình đưa thiết bị vào mạng
 }
 ```
 
-## RESET_NODE
+## 2.3 RESET_NODE
 Xóa 1 hoặc nhiều thiết bị trong mạng
 ### Gửi đi
 
@@ -334,9 +334,9 @@ Từng thiết bị sẽ phản hồi về sau khi xóa khỏi mạng BLE
    }
 }
 ```
-# SET_SCENE_FOR_DEVICE
+# 3. SET_SCENE_FOR_DEVICE
 
-## TYPE: "CREATE"
+## 3.1 TYPE: "CREATE"
 TYPE: "CREATE"
 Gán cảnh vào nút cho device (công tắc cảnh hoặc cảm biến)
 
@@ -424,7 +424,7 @@ sensor: thêm cảnh có EVENT_TRIGGER_ID: "aa3549d4-5471-4d75-b0b2-  b70fa5c10f
    }
 }
 ```
-## TYPE: "EDIT"
+## 3.2 TYPE: "EDIT"
 
 TYPE: "EDIT"
 Sửa cảnh gán cho device (công tắc cảnh hoặc cảm biến)
@@ -505,7 +505,7 @@ Sửa cảnh gán cho device (công tắc cảnh hoặc cảm biến)
    }
 }
 ```
-## TYPE: "DELETE"
+## 3.3 TYPE: "DELETE"
 TYPE: "DELETE"
 xóa cảnh gán với device (công tắc cảnh hoặc cảm biến)
 ### Gửi đi
@@ -558,9 +558,9 @@ xóa cảnh gán với device (công tắc cảnh hoặc cảm biến)
    }
 }
 ```
-# EVENT_TRIGGER
+# 4. EVENT_TRIGGER
 
-## TYPE: "CREATE" Tạo 1 EVENT_TRIGGER
+## 4.1 TYPE: "CREATE" Tạo 1 EVENT_TRIGGER
 TYPE: "CREATE"
 HC nhận được bản ghi thêm EvenTrigger sẽ lưu dữ liệu vào bảng EvenTrigger, kiểm tra trường EventTriggerTYPEID nếu bằng 1 (cảnh) thì sẽ gửi bản tin tạo cảnh xuống GateWay
 ### Gửi đi
@@ -645,7 +645,7 @@ HC nhận được bản ghi thêm EvenTrigger sẽ lưu dữ liệu vào bảng
 }
 ```
 
-## TYPE: "EDIT" Sửa 1 EVENT_TRIGGER
+## 4.2 TYPE: "EDIT" Sửa 1 EVENT_TRIGGER
 TYPE: "EDIT"
 HC nhận được bản tin sửa EVEN_TRIGGER theo các thông số người dùng cài đặt
 ### Gửi đi
@@ -688,7 +688,7 @@ HC nhận được bản tin sửa EVEN_TRIGGER theo các thông số người d
 }
 ``` 
 
-## TYPE: "DELETE" Xóa 1 EVENT_TRIGGER
+## 4.3 TYPE: "DELETE" Xóa 1 EVENT_TRIGGER
 TYPE: "DELETE"
 
 ### Gửi đi
@@ -712,9 +712,9 @@ TYPE: "DELETE"
    }
 }
 ```
-# EVENT_TRIGGER_OUTPUT_DEVICE_MAPPING
+# 5. EVENT_TRIGGER_OUTPUT_DEVICE_MAPPING
 
-## TYPE: "ADD"
+## 5.1 TYPE: "ADD"
 
 Nếu :
 "EVENT_TRIGGER_TYPE_ID" : 1
@@ -777,7 +777,7 @@ Nếu :
    }
 }
 ```
-## TYPE: DELETE
+## 5.2 TYPE: DELETE
 ### Gửi đi
 
 ```json
@@ -818,9 +818,9 @@ Nếu :
    }
 }
 ```
-# DEVICE_UPDATE_STATUS
+# 6. DEVICE_UPDATE_STATUS
 
-## Bản tin cập nhật trạng thái thiết bị khi vừa mở app
+## 6.1 Bản tin cập nhật trạng thái thiết bị khi vừa mở app
 ```json
 {
    "CMD":"DEVICE_UPDATE",
@@ -858,9 +858,9 @@ Nếu :
    }
 }
 ```
-# RULE
+# 7. RULE
 
-## "TYPE": "CREATE" tạo rule với các thông số được cài đặt theo thông số người dùng lựa chọn
+## 7.1 "TYPE": "CREATE" tạo rule với các thông số được cài đặt theo thông số người dùng lựa chọn
 
 
 *Lưu ý: VD: Nếu không có thời gian bỏ trường thời gian START_AT, END_AT
@@ -942,7 +942,7 @@ Nếu :
 }
 ``` 
 
-## "TYPE": "EDIT" giống bản tin CREATE nhưng các thông số bị thay đổi
+## 7.2 "TYPE": "EDIT" giống bản tin CREATE nhưng các thông số bị thay đổi
 ### Gửi đi
 
 ```json
@@ -1022,7 +1022,7 @@ Nếu :
 ```
 
 
-## "TYPE": "DELETE"
+## 7.3 "TYPE": "DELETE"
 ### Gửi đi
 
 ```json
